@@ -1,10 +1,7 @@
-import React,{useEffect} from "react";
+import React from "react";
 import "./App.css";
 
 const App = ()=> {
-  useEffect(()=>{
-    console.log('effect')
-  }, [])
   return (
     <div>
     App Run
