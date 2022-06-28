@@ -95,3 +95,9 @@ body {
   color: #10489b !important;
   font-weight: bold;
 }
+
+.btn{
+  font-size: smaller;
+  width: 100%;
+  height: 33px;
+}

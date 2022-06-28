@@ -1,14 +1,14 @@
-import React, { Fragment } from "react";
+import React from "react";
 
-export const Input = ({ type, placeholder, setInput, label }) => {
+export const Input = ({ type, placeholder, label,onSetInput }) => {
   return (
-    <span >
-      <span class=" d-block label label-default font-weight-bold ">{label}</span>
+    <span className="col">
+      <span className=" d-block label label-default font-weight-bold ">{label}</span>
       <input
         className="form-control-sm mt-2 input-style "
         type={type}
         placeholder={placeholder}
-        onChange={setInput}
+        onChange={onSetInput}
       />
     </span>
   );
