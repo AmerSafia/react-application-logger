@@ -72,13 +72,13 @@ const Logger = () => {
   };
 
   const handleSearchLogger = (e) => {
-    const { application, action } = searchLogger;
+    const { application, action ,applicationID} = searchLogger;
     e.preventDefault();
     const filterDataTable = dataTable.filter(
-      ({ applicationType, actionType }) => {
+      ({ applicationType, actionType, applicationId}) => {
         return (
           applicationType === application ||
-          actionType.length === action
+          actionType === action || applicationId === applicationID
         );
       }
     );
