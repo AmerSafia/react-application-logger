@@ -1,4 +1,4 @@
-export  const columns = [
+export const columns = [
   { path: "logId", label: "Log ID" },
   { path: "applicationType", label: "Application Type" },
   { path: "applicationId", label: "Application ID" },
@@ -6,5 +6,3 @@ export  const columns = [
   { path: "actionDetails", label: "Action Details" },
   { path: "creationTimestamp", label: "Date" },
 ];
-
-

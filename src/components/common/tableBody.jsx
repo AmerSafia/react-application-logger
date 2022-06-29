@@ -2,12 +2,14 @@ import React from "react";
 import _ from "lodash";
 
 const TableBody = ({ columns, data }) => {
- const renderCell = (item, column) => {
+  const renderCell = (item, column) => {
     if (column.content) return column.content(item);
+    if (column.path == "creationTimestamp") {
+        return item.creationTimestamp.replace(' ', ' / ')
+    }
     return _.get(item, column.path);
   };
-
- const createKey = () => {
+  const createKey = () => {
     return Math.random();
   };
 
@@ -16,7 +18,7 @@ const TableBody = ({ columns, data }) => {
       {data.map((item) => (
         <tr key={createKey()}>
           {columns.map((column) => (
-            <td key={createKey()} className="m-4">
+            <td key={createKey()} className="m-4" >
               {renderCell(item, column)}
             </td>
           ))}

@@ -1,15 +1,17 @@
 import React from "react";
 
-export const Input = ({ type, placeholder, label,onSetInput }) => {
+export const Input = ({ type, placeholder, label,onSetInput, name, value }) => {
   return (
-    <span className="col">
-      <span className=" d-block label label-default font-weight-bold ">{label}</span>
+    <div className="col">
+      <label  className=" d-block font-weight-bold ">{label}</label>
       <input
-        className="form-control-sm mt-2 input-style "
+        className="form-control-sm input-style w-100 "
         type={type}
         placeholder={placeholder}
         onChange={onSetInput}
+        name={name}
+        value={value}
       />
-    </span>
+    </div>
   );
 };

@@ -4,10 +4,10 @@ const Breadcrumb = () => {
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb  m-0 p-0">
         <li className="breadcrumb-item">
-          <a>Home</a>
+          <a href="#">Home</a>
         </li>
         <li className="breadcrumb-item">
-          <a>Administration</a>
+          <a href="#">Administration</a>
         </li>
         <li className="breadcrumb-item active" aria-current="page">
           Logger Search

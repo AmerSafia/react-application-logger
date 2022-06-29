@@ -1,5 +1,5 @@
 import React from "react";
-import { columns } from "../staticdata/headerLogger";
+import { columns } from "../staticdata/data";
 import Table from "./common/table";
 
 const LoggerTable = ({ data, sortColumn, onSort }) => {
