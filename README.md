@@ -5,7 +5,7 @@ Simple ReactJS starter with an opinionated folder structure.
 ## Getting Started
 
 1. Ensure you've followed the [ReactJS - Getting Started Guide](https://reactjs.org/docs/getting-started.html)
-1. Clone this project `git clone https://github.com/mohammadsafia/simple-react-starter.git`
+1. Clone this project `git clone https://github.com/AmerSafia/react-application-logger.git`
 1. Run `npm install` from root directory to install dependencies
 1. Run `npm start` from root directory
 1. build `npm run build` from root directory
