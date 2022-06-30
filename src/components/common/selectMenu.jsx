@@ -2,7 +2,7 @@ import React from "react";
 
 const SelectMenu = ({ label, options, onSelectedValue, name, value }) => {
   return (
-    <span className="col">
+    <span className="col-Custom">
       <label  id="inputState" className="font-weight-bold ">{label}</label>
       <select
         value={value}

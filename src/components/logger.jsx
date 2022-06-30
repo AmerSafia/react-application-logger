@@ -18,7 +18,6 @@ const Logger = () => {
   const [totalCount, setTotalCount] = useState(0);
   const history = useHistory();
 
-
   const [searchLogger, setSearchLogger] = useState({
     employee: "",
     action: "",
@@ -29,7 +28,7 @@ const Logger = () => {
   });
 
   useEffect(() => {
-    setFormValueFromParams()
+    setFormValueFromParams();
 
     getAudiLog();
   }, []);
@@ -39,16 +38,16 @@ const Logger = () => {
     const params = Object.fromEntries(urlParams);
     setSearchLogger({
       ...searchLogger,
-      ...params
-    })
-  }
+      ...params,
+    });
+  };
 
   const getAudiLog = async () => {
     let data;
     await Api.audiLogApi.list().then((response) => {
       data = response.result.auditLog;
     });
-    setConstantData(data)
+    setConstantData(data);
     setDataTable(data);
     getPagedData(data);
   };
@@ -72,13 +71,14 @@ const Logger = () => {
   };
 
   const handleSearchLogger = (e) => {
-    const { application, action ,applicationID} = searchLogger;
+    const { application, action, applicationID } = searchLogger;
     e.preventDefault();
     const filterDataTable = dataTable.filter(
-      ({ applicationType, actionType, applicationId}) => {
+      ({ applicationType, actionType, applicationId }) => {
         return (
           applicationType === application ||
-          actionType === action || applicationId === applicationID
+          actionType === action ||
+          applicationId === applicationID
         );
       }
     );
@@ -108,7 +108,6 @@ const Logger = () => {
 
     history.push({ search: params.toString() });
   };
-
 
   return (
     <div>
