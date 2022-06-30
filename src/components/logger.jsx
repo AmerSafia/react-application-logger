@@ -10,7 +10,6 @@ import FiltersForm from "./common/filtersForm";
 const Logger = () => {
   const [dataTable, setDataTable] = useState([]);
   const [constantData, setConstantData] = useState([]);
-
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize] = useState(10);
   const [sortColumn, setSortColumn] = useState({ path: "logId", order: "asc" });
@@ -29,7 +28,6 @@ const Logger = () => {
 
   useEffect(() => {
     setFormValueFromParams();
-
     getAudiLog();
   }, []);
 
@@ -71,8 +69,8 @@ const Logger = () => {
   };
 
   const handleSearchLogger = (e) => {
-    const { application, action, applicationID } = searchLogger;
     e.preventDefault();
+    const { application, action, applicationID } = searchLogger;
     const filterDataTable = dataTable.filter(
       ({ applicationType, actionType, applicationId }) => {
         return (
@@ -109,6 +107,16 @@ const Logger = () => {
     history.push({ search: params.toString() });
   };
 
+  const handleReset = (e) => {
+    e.preventDefault();
+    const reset = {...searchLogger}
+    for (const property in reset) {
+      reset[property] = ''
+    }
+    setSearchLogger(reset)
+    getAudiLog()
+  }
+
   return (
     <div>
       <FiltersForm
@@ -116,6 +124,7 @@ const Logger = () => {
         searchLogger={searchLogger}
         constantData={constantData}
         handleSearchLogger={handleSearchLogger}
+        handleReset={handleReset}
       />
 
       <div className="row">
