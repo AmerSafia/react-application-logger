@@ -110,4 +110,7 @@ body {
   .btn{
     margin-top: 20px;
   }
+  .table-row  {
+    width: fit-content;
+  }
 }

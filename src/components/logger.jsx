@@ -127,7 +127,7 @@ const Logger = () => {
         handleReset={handleReset}
       />
 
-      <div className="row">
+      <div className="row table-row">
         <div className="col table-style m-3" style={{ backGround: "#fff" }}>
           <LoggerTable
             data={logger}
